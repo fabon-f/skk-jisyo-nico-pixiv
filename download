@@ -1,0 +1,9 @@
+#!/bin/sh
+
+url="https://cdn.ncaq.net/dic-nico-intersection-pixiv.txt"
+outfile="dic-nico-intersection-pixiv.txt"
+if command -v wget > /dev/null 2>&1; then
+  wget -O "$outfile" "$url"
+elif command -v curl > /dev/null 2>&1; then
+  curl -L -o $outfile "$url"
+fi
