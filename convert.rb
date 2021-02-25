@@ -10,7 +10,7 @@ end
 
 def escape(str, escape: :concat)
   if escape == :concat
-    escaped_str = str.gsub(/[\/;]/, { "/" => "\\057", ";" => "\\073" })
+    escaped_str = str.gsub(/[\\\/;]/, { "\\" => "\\\\", "/" => "\\057", ";" => "\\073" })
     escaped_str == str ? str : "(concat \"#{escaped_str}\")"
   elsif escape == :omit
     # 単純にエントリを削除する
