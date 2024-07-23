@@ -1,6 +1,6 @@
 #!/bin/sh
 
-url="https://cdn.ncaq.net/dic-nico-intersection-pixiv.txt"
+url="https://github.com/ncaq/dic-nico-intersection-pixiv/raw/master/public/dic-nico-intersection-pixiv-google.txt"
 outfile="dic-nico-intersection-pixiv.txt"
 if command -v wget > /dev/null 2>&1; then
   wget -O "$outfile" "$url"
